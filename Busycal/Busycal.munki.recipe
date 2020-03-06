@@ -5,20 +5,20 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of N4RA379GBW.com.busymac.busycal3.alarm and imports it into Munki.</string>
+	<string>Downloads the latest version of Busycal and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.macfaqulty.munki.N4RA379GBW.com.busymac.busycal3.alarm</string>
+	<string>com.macfaqulty.munki.busycal</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>N4RA379GBW.com.busymac.busycal3.alarm</string>
+		<string>busycal</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>N4RA379GBW.com.busymac.busycal3.alarm.app</string>
+				<string>busycal.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
@@ -29,7 +29,7 @@
 			<key>developer</key>
 			<string>Busy Apps FZE</string>
 			<key>display_name</key>
-			<string>N4RA379GBW.com.busymac.busycal3.alarm</string>
+			<string>busycal</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.macfaqulty.download.N4RA379GBW.com.busymac.busycal3.alarm</string>
+	<string>com.macfaqulty.download.busycal</string>
 	<key>Process</key>
 	<array>
 		<dict>
