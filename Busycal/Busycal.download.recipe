@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Busycal.</string>
 	<key>Identifier</key>
-	<string>com.macfaqulty.download.busycal</string>
+	<string>com.echoparkbaby.download.busycal</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
