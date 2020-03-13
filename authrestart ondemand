@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>RestartAction</key>
+    <string>RequireRestart</string>
+	<key>_metadata</key>
+	<dict>
+		<key>created_by</key>
+		<string>eholtam</string>
+		<key>creation_date</key>
+		<date>2020-03-12T15:56:21Z</date>
+		<key>munki_version</key>
+		<string>4.1.1.3931</string>
+		<key>os_version</key>
+		<string>10.15.3</string>
+	</dict>
+	<key>category</key>
+	<string>Utilities</string>
+	<key>description</key>
+	<string>Use this to restart the computer and automatically unlock the disk upon reboot.</string>
+	<key>developer</key>
+	<string>Meredith</string>
+	<key>display_name</key>
+	<string>Authorized Restart</string>
+	<key>autoremove</key>
+	<false/>
+	<key>catalogs</key>
+	<array>
+		<string>testing-authorizedrestart</string>
+	</array>
+	<key>installer_type</key>
+	<string>nopkg</string>
+	<key>minimum_os_version</key>
+	<string>10.12.0</string>
+	<key>OnDemand</key>
+	<true/>
+	<key>postinstall_script</key>
+	<string>#!/bin/bash
+exit 0
+    </string>
+	<key>name</key>
+	<string>authorized_reboot</string>
+	<key>version</key>
+	<string>2020.3.12</string>
+</dict>
+</plist>
