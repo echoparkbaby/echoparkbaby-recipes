@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest verison of Drobo Dashboard</string>
 	<key>Identifier</key>
-	<string>com.github.joshua-d-miller.download.drobodashboard</string>
+	<string>com.github.echoparkbaby.download.drobodashboard</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
