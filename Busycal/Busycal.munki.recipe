@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.echoparkbaby.download.busycal</string>
+	<string>com.github.scriptingosx.download.BusyCal</string>
 	<key>Process</key>
 	<array>
 		<dict>
