@@ -3,31 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Busycal and imports it into Munki.</string>
+	<string>Downloads the latest version of BusyCal and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.echoparkbaby.munki.Busycal</string>
+	<string>com.github.echoparkbaby.munki.BusyCal</string>
 	<key>Input</key>
 	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>busycal</string>
+		<string>BusyCal</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>busycal.app</string>
+				<string>BusyCal.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Calendar app</string>
 			<key>developer</key>
 			<string>Busy Apps FZE</string>
 			<key>display_name</key>
-			<string>busycal</string>
+			<string>Busycal</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -38,48 +40,28 @@
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.scriptingosx.download.BusyCal</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.scriptingosx.download.BusyCal</key>
+			<dict>
+				<key>path</key>
+				<string>~/Desktop/BusyCal.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>83c952b60f4ebe0efcdec87fb9b3863a4c95f1729358c3c3e8439c962c850c1d</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/Distribution</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkg_path</key>
-				<string>%dmg_path%</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/pkg/BusyCal Installer.pkg</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
