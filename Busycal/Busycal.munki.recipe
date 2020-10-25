@@ -92,35 +92,6 @@
 			<string>Versioner</string>
 		</dict>
 		<dict>
-			<key> Processor </key>
-			<string> PkgCreator </string>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_request</key>
-				<dict>
-					<key> id </key>
-					<string> com.busymac.busycal2 </string>
-					<key> options </key>
-					<string> purge_ds_store </string>
-					<key> pkgdir </key>
-					<string>% RECIPE_CACHE_DIR% </string>
-					<key> pkgname </key>
-					<string>% NAME% -% version% </string>
-					<key>chown</key>
-					<array>
-						<dict>
-							<key> user </key>
-							<string> root </string>
-							<key>group</key>
-							<string>admin</string>
-							<key>path</key>
-							<string> Applications </string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>faux_root</key>
