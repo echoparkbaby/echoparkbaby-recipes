@@ -16,6 +16,8 @@
 		<string>BusyCal</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>Icon Name</key>
+			<string>BusyCal.png</string>
 			<key>blocking_applications</key>
 			<array>
 				<string>BusyCal.app</string>
@@ -24,8 +26,10 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Office</string>
 			<key>description</key>
-			<string>Calendar app</string>
+			<string>BusyCal enables you to create events and to dos using natural language. A preview of the event details are displayed while you type as it recognizes the title, date and time, location and more. You can even use it to add contacts or attendees, set an alarm, add a URL, or to indicate the calendar to create the event on.</string>
 			<key>developer</key>
 			<string>Busy Apps FZE</string>
 			<key>display_name</key>
