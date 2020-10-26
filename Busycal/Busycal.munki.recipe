@@ -8,16 +8,12 @@
 	<string>com.github.echoparkbaby.munki.BusyCal</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_CATEGORY</key>
-		<string>Productivity</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/BusyCal</string>
 		<key>NAME</key>
 		<string>BusyCal</string>
 		<key>pkginfo</key>
 		<dict>
-			<key>Icon Name</key>
-			<string>BusyCal.png</string>
 			<key>blocking_applications</key>
 			<array>
 				<string>BusyCal.app</string>
