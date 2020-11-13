@@ -14,6 +14,8 @@
 		<string>Backblaze</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>blocking_applications</key>
+			<string>System Preferences</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
