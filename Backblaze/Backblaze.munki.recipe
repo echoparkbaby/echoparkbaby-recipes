@@ -30,6 +30,10 @@
 			<string>10.12</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+sudo /Volumes/Backblaze\ Installer/Backblaze\ Installer.app/Contents/MacOS/bzinstall_mate -upgrade bzdiy
+exit 0</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
