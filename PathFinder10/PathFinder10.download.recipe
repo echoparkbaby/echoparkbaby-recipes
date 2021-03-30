@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Path Finder.</string>
 	<key>Identifier</key>
-	<string>com.echoparkbaby.download.PathFinder</string>
+	<string>com.echoparkbaby.download.PathFinder10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

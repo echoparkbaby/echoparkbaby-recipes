@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot) Thank you Elliot!!</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Path Finder and imports it into Munki.</string>
+	<string>Downloads Path Finder 10 and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.echoparkbaby.munki.PathFinder</string>
+	<string>com.echoparkbaby.munki.PathFinder10</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.echoparkbaby.download.PathFinder</string>
+	<string>com.echoparkbaby.download.PathFinder10</string>
 	<key>Process</key>
 	<array>
 		<dict>
