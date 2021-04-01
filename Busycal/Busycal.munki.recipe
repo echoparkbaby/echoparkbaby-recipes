@@ -3,15 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of BusyCal and imports it into Munki.</string>
+	<string>Downloads the latest version of BusyCal and imports it into Munki. (based on pkg recipe from Armin Briegel which Re-packages BusyCal in a new PKG without nasty scripts.)</string>
 	<key>Identifier</key>
 	<string>com.github.echoparkbaby.munki.BusyCal</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_CATEGORY</key>
-		<string>Productivity</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/BusyCal</string>
 		<key>NAME</key>
 		<string>BusyCal</string>
 		<key>pkginfo</key>
@@ -24,8 +22,10 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Office</string>
 			<key>description</key>
-			<string>Calendar app</string>
+			<string>BusyCal enables you to create events and to dos using natural language. A preview of the event details are displayed while you type as it recognizes the title, date and time, location and more. You can even use it to add contacts or attendees, set an alarm, add a URL, or to indicate the calendar to create the event on.</string>
 			<key>developer</key>
 			<string>Busy Apps FZE</string>
 			<key>display_name</key>
@@ -39,33 +39,37 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>1.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.scriptingosx.download.BusyCal</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.scriptingosx.download.BusyCal</key>
-			<dict>
-				<key>path</key>
-				<string>~/Desktop/BusyCal.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>83c952b60f4ebe0efcdec87fb9b3863a4c95f1729358c3c3e8439c962c850c1d</string>
-			</dict>
-		</dict>
-	</dict>
+	<string>com.github.scriptingosx.pkg.BusyCal</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/pkg/BusyCal Installer.pkg</string>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/BusyCal.app</string>
+				</array>
+				<key>version_comparison_key</key>
+				<string>CFBundleVersion</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>version_comparison_key</key>
+				<string>CFBundleVersion</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
