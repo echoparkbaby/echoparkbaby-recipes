@@ -16,8 +16,6 @@
 		<string>Arq</string>
 		<key>pkginfo</key>
 		<dict>
-			<key>RestartAction</key>
-			<string>RequireLogout</string>
 			<key>blocking_applications</key>
 			<array>
 				<string>ArqAgent.app</string>
