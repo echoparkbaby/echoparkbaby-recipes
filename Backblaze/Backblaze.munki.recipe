@@ -3,47 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Backblaze Business Backup DMG and imports it into Munki.</string>
+	<string>Downloads the latest version of Backblaze Installer and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.echoparkbaby.munki.Backblaze</string>
+	<string>com.echoparkbaby.munki.BackblazeInstaller</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/Backblaze</string>
+		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>Backblaze</string>
 		<key>pkginfo</key>
 		<dict>
-			<key>blocking_applications</key>
-			<string>System Preferences</string>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>System</string>
 			<key>description</key>
-			<string>Backblaze is a powerful and secure backup service.</string>
+			<string>Online backups with unlimited space. Backblaze backup encrypts and uploads all your data – no questions asked. No picking files. No digging through folders. Your data is backed up online to our datacenters, so nothing can touch it.</string>
 			<key>developer</key>
 			<string>Backblaze</string>
 			<key>display_name</key>
-			<string>Backblaze</string>
-			<key>minimum_os_version</key>
-			<string>10.12</string>
+			<string>Backblaze Installer</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>postinstall_script</key>
-			<string>#!/bin/bash
-sudo /Volumes/Backblaze\ Installer/Backblaze\ Installer.app/Contents/MacOS/bzinstall_mate -upgrade bzdiy
-exit 0</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.echoparkbaby.download.Backblaze</string>
+	<string>com.echoparkbaby.download.BackblazeInstaller</string>
 	<key>Process</key>
 	<array>
 		<dict>
