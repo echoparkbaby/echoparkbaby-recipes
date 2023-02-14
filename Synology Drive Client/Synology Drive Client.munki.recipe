@@ -40,7 +40,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.echoparkbaby.download.SynologyDriveClient</string>
+	<string>com.github.ahousseini-recipes.download.SynologyDriveClient</string>
 	<key>Process</key>
 	<array>
 		<dict>
