@@ -34,7 +34,7 @@
 				<key>force</key>
 				<true/>
 				<key>url</key>
-				<string>%SPARKLE_FEED_URL%</string>
+				<string>%url%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
