@@ -14,7 +14,7 @@
 		<string>Bartender 5</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>5.0</string>
+	<string>2.7</string>
 	<key>Process</key>
 	<array>
 		<dict>
